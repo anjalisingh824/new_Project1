@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="47296" started-at="2016-10-18T18:48:17Z" finished-at="2016-10-18T18:49:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="47296" started-at="2016-10-18T18:48:17Z" finished-at="2016-10-18T18:49:04Z">
+      <class name="new_Work.validation_Project">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:new_Work.validation_Project@2a2d45ba]" name="setUp" is-config="true" duration-ms="3478" started-at="2016-10-18T14:48:17Z" finished-at="2016-10-18T14:48:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testMagadh()[pri:0, instance:new_Work.validation_Project@2a2d45ba]" name="testMagadh" duration-ms="43730" started-at="2016-10-18T14:48:20Z" finished-at="2016-10-18T14:49:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMagadh -->
+        <test-method status="PASS" signature="close_Browser()[pri:0, instance:new_Work.validation_Project@2a2d45ba]" name="close_Browser" is-config="true" duration-ms="74" started-at="2016-10-18T14:49:04Z" finished-at="2016-10-18T14:49:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close_Browser -->
+      </class> <!-- new_Work.validation_Project -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
