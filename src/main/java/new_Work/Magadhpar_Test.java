@@ -159,26 +159,7 @@ public class Magadhpar_Test {
 		// select location after going back to the window.and comparing from the
 		// value that we have stored in the excel
 		driver.findElement(By.id("id_newsLocation"));
-		String save_Location = ExcelUtils.ExcelWSheet.getRow(row).getCell(3).getStringCellValue();
-		List<WebElement> Location = driver.findElements(By.tagName("option"));
-		String string = "cat";
-		for (int i = 0; i < Location.size(); i++) {
-
-			if (Location.get(i).getText().equals(save_Location)) {
-				Log.info("this is if condition");
-				WebElement ele = Location.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				string = "dog";
-				break;
-			}
-
-		}
-		if (string.equals("cat")) {
-
-			Location.get(1).click();
-
-		}
+		check.dropdown(driver,1,3);
 		Thread.sleep(5000);
 
 		// add Category
@@ -243,27 +224,7 @@ public class Magadhpar_Test {
 		// select category after going back to the window and comparing it from
 		// the value that we have stored in the excel
 		driver.findElement(By.id("id_newsCategory"));
-		String save_Category = ExcelUtils.ExcelWSheet.getRow(row).getCell(4).getStringCellValue();
-		List<WebElement> Category = driver.findElements(By.tagName("option"));
-		String string1 = "cat";
-		for (int i = 0; i < Category.size(); i++) {
-
-			if (Category.get(i).getText().equals(save_Category)) {
-
-				Log.info("this is if cndition");
-				WebElement ele = Category.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				string1 = "dog";
-				break;
-			}
-
-		}
-		if (string1.equals("cat")) {
-
-			Category.get(1).click();
-
-		}
+		check.dropdown(driver,1,4);
 		Thread.sleep(5000);
 
 		// select image from excel
@@ -292,52 +253,12 @@ public class Magadhpar_Test {
 
 		// taking news location
 		driver.findElement(By.id("id_newsLocation"));
-		String save_Location1 = ExcelUtils.ExcelWSheet.getRow(row1).getCell(3).getStringCellValue();
-		List<WebElement> Location1 = driver.findElements(By.tagName("option"));
-		String string2 = "cat";
-		for (int i = 0; i < Location1.size(); i++) {
-
-			if (Location1.get(i).getText().equals(save_Location1)) {
-
-				Log.info("this is if condition");
-				WebElement ele = Location1.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				string2 = "dog";
-				break;
-			}
-
-		}
-		if (string2.equals("cat")) {
-
-			Location1.get(1).click();
-
-		}
+		check.dropdown(driver,2,3);
 		Thread.sleep(5000);
 
+		//taking category
 		driver.findElement(By.id("id_newsCategory"));
-		String save_Category1 = ExcelUtils.ExcelWSheet.getRow(row1).getCell(4).getStringCellValue();
-		List<WebElement> Category1 = driver.findElements(By.tagName("option"));
-		String string3 = "cat";
-		for (int i = 0; i < Category1.size(); i++) {
-
-			if (Category1.get(i).getText().equals(save_Category1)) {
-
-				Log.info("this is if condition");
-				WebElement ele = Category1.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				string3 = "dog";
-				break;
-			}
-
-		}
-		if (string3.equals("cat")) {
-
-			Category1.get(1).click();
-
-		}
-
+		check.dropdown(driver,2,4);
 		// deleting image
 		driver.findElement(By.id("id_newsImages-0-DELETE")).click();
 
