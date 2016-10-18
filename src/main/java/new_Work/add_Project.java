@@ -189,6 +189,7 @@ public class add_Project {
 		String se = "cat";
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getText().equals(store_ValuefromEcxel)) {
+				Log.info("this is if condition);
 				WebElement e = list.get(i);
 				Thread.sleep(2000);
 				e.click();
@@ -200,7 +201,7 @@ public class add_Project {
 		if (se.equals("cat")) {
 
 			list.get(1).click();
-			System.out.println("entering if if loop");
+			
 		}
 
 		// project description
