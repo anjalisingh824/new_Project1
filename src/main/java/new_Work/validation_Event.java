@@ -163,27 +163,7 @@ public class validation_Event {
 
 		// taking the location from excel
 		driver.findElement(By.id("id_eventLocation"));
-		String save_Location = ExcelUtils.ExcelWSheet.getRow(row).getCell(8).getStringCellValue();
-		List<WebElement> event_Location = driver.findElements(By.tagName("option"));
-		String s5 = "cat";
-		for (int i = 0; i < event_Location.size(); i++) {
-
-			if (event_Location.get(i).getText().equals(save_Location)) {
-
-				Log.info("this is if condition");
-				WebElement ele = event_Location.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				s5 = "dog";
-				break;
-			}
-
-		}
-		if (s5.equals("cat")) {
-
-			event_Location.get(1).click();
-
-		}
+	        check.dropdown(driver,6,8);
 		Thread.sleep(5000);
 
 		// taking address
