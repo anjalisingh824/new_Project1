@@ -65,50 +65,10 @@ public class validationNews_Feed {
 		Thread.sleep(2000);
 		// select location
 		driver.findElement(By.id("id_newsLocation"));
-		String news_location = ExcelUtils.ExcelWSheet.getRow(row1).getCell(3).getStringCellValue();
-		List<WebElement> store_location = driver.findElements(By.tagName("option"));
-		String s5 = "cat";
-		for (int i = 0; i < store_location.size(); i++) {
-
-			if (store_location.get(i).getText().equals(news_location)) {
-
-				Log.info("this is if condition");
-				WebElement ele = store_location.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				s5 = "dog";
-				break;
-			}
-
-		}
-		if (s5.equals("cat")) {
-
-			store_location.get(1).click();
-
-		}
+		check.dropdown(driver,3,3);
 		// select category
 		driver.findElement(By.id("id_newsCategory"));
-		String select_Category = ExcelUtils.ExcelWSheet.getRow(row1).getCell(4).getStringCellValue();
-		List<WebElement> store_Category = driver.findElements(By.tagName("option"));
-		String s6 = "cat";
-		for (int i = 0; i < store_Category.size(); i++) {
-
-			if (store_Category.get(i).getText().equals(select_Category)) {
-
-				Log.info("this is if condition");
-				WebElement ele = store_Category.get(i);
-				Thread.sleep(5000);
-				ele.click();
-				s6 = "dog";
-				break;
-			}
-
-		}
-		if (s6.equals("cat")) {
-
-			store_Category.get(1).click();
-
-		}
+		check.dropdown(driver,3,4);
 
 		// selecting image in pdf format so,it should give error
 		driver.findElement(By.linkText("Add another News image")).click();
