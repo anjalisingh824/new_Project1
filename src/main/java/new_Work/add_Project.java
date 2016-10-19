@@ -184,26 +184,7 @@ public class add_Project {
 
 		// project location
 		driver.findElement(By.id("id_newsLocation"));
-		String store_ValuefromEcxel = ExcelUtils.ExcelWSheet.getRow(row).getCell(6).getStringCellValue();
-		List<WebElement> list = driver.findElements(By.tagName("option"));
-		String se = "cat";
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getText().equals(store_ValuefromEcxel)) {
-				Log.info("this is if condition);
-				WebElement e = list.get(i);
-				Thread.sleep(2000);
-				e.click();
-				se = "dog";
-				break;
-			}
-
-		}
-		if (se.equals("cat")) {
-
-			list.get(1).click();
-			
-		}
-
+		check.dropdown(driver,9,6);
 		// project description
 		driver.findElement(By.id("id_projectDescription"))
 				.sendKeys(ExcelUtils.ExcelWSheet.getRow(row).getCell(7).getStringCellValue());
