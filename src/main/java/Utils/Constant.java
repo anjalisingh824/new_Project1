@@ -1,7 +1,7 @@
 package Utils;
 
 public class Constant {
-	public static String FILE_FULL_PATH="/home/smart/workspace/new_Project/src/main/resources/TestingApp.xlsx";
+	public static final String FILE_FULL_PATH="/home/smart/workspace/new_Project/src/main/resources/TestingApp.xlsx";
 	public static final String FILE_PATH = "src/main/resources/";
 	public static final String FILE_NAME = "TestingApp.xlsx";
 	public static final String SHEET_NAME = "Sheet1";
