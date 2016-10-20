@@ -5,13 +5,13 @@ public class Constant {
 	public static final String FILE_PATH = "src/main/resources/";
 	public static final String FILE_NAME = "TestingApp.xlsx";
 	public static final String SHEET_NAME = "Sheet1";
-	public static final	String URL = "http://139.59.29.185/admin";
+	public static final String URL = "http://139.59.29.185/admin";
 	public static final String MOBILE_NO="919408580801";
 	public static final String PASSWORD="smart123";
 	
 	//page title check
-	public static final String LOGIN_TITLE="Log in | Django site admin";
-	public static final String SELECT_FEED_TITLE="Site administration | Django site admin";
+    public static final String LOGIN_TITLE="Log in | Django site admin";
+    public static final String SELECT_FEED_TITLE="Site administration | Django site admin";
     public static final String NEWS_FEED_TITLE="Select news feed to change | Django site admin";
     public static final String ADD_NEWSFEED_TITLE="Add news feed | Django site admin";
 
