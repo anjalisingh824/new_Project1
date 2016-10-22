@@ -89,24 +89,19 @@ public class NewsFeedValidation {
 		checkErrorTitle.contains(Constant.TITLE_ERROR_CHECK);
 
 		// image error check if we will try 2 upload pdf and other formats
-		String checkImageError = driver
-				.findElement(By
-						.xpath("//html/body/div/div[3]/div/form/div/div[1]/div/fieldset/table/tbody/tr[1]/td[2]/ul/li"))
-				.getText();
+		String checkImageError = driver.findElement(By.xpath("//html/body/div/div[3]/div/form/div/div[1]/div/fieldset/table/tbody/tr[1]/td[2]/ul/li")).getText();
 		checkImageError.contains(Constant.IMAGE_ERROR);
 
 		// taking 2nd row now for checking the description limit
 		int row2 = 4;
 		// taking news title
 		driver.findElement(By.id("id_newsTitle")).clear();
-		driver.findElement(By.id("id_newsTitle"))
-				.sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(1).getStringCellValue());
+		driver.findElement(By.id("id_newsTitle")).sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(1).getStringCellValue());
 		Thread.sleep(5000);
 
 		// taking new description
 		driver.findElement(By.id("id_newsDescription")).clear();
-		driver.findElement(By.id("id_newsDescription"))
-				.sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(2).getStringCellValue());
+		driver.findElement(By.id("id_newsDescription")).sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(2).getStringCellValue());
 		Thread.sleep(5000);
 
 		// selecting image in xlsx format so it should give error
@@ -114,8 +109,7 @@ public class NewsFeedValidation {
 		Thread.sleep(5000);
 		driver.findElement(By.id("id_newsImages-0-newsImage")).clear();
 		Thread.sleep(5000);
-		driver.findElement(By.id("id_newsImages-0-newsImage"))
-				.sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(5).getStringCellValue());
+		driver.findElement(By.id("id_newsImages-0-newsImage")).sendKeys(ExcelUtils.ExcelWSheet.getRow(row2).getCell(5).getStringCellValue());
 		Thread.sleep(5000);
 
 		// save button click
