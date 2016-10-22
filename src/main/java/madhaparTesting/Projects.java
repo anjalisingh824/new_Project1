@@ -63,6 +63,7 @@ public class Projects {
 		// click on add project
 		driver.findElement(By.xpath("//*[@id='content-main']/ul/li/a")).click();
 		Thread.sleep(5000);
+		
 		// check for the title
 		Assert.assertTrue(Constant.ADD_PROJECT_TITLE.contains(driver.getTitle()));
 		Thread.sleep(2000);
@@ -70,13 +71,11 @@ public class Projects {
 		// click on save button to check for the mandatory fields
 		driver.findElement(By.xpath("//*[@id='project_form']/div/div[2]/input[1]")).click();
 
-		// project tile error after clicking on save saying project title
-		// between 5 to 40 characters
+		// project tile error after clicking on save saying project title between 5 to 40 characters
 		String projectTitleError = driver.findElement(By.xpath("//*[@id='project_form']/div/ul/li")).getText();
 		projectTitleError.contains(Constant.PROJECT_TITLE_CHECK);
 
-		// checking mandatory fields after clicking on the save (This field is
-		// required)
+		// checking mandatory fields after clicking on the save (This field is  required)
 		String titleError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[1]/ul/li")).getText();
 		titleError.contains(Constant.MANDATORY_ERROR);
 
