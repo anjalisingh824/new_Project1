@@ -102,34 +102,33 @@ public class ProjectValidation {
 		Thread.sleep(5000);
 
 		// error check for date from
-		String projectDateFrom_error = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[2]/ul/li"))
+		String projectDateFError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[2]/ul/li"))
 				.getText();
-		projectDateFrom_error.contains(Constant.DATE_ERROR);
+		projectDateFError.contains(Constant.DATE_ERROR);
 
 		// error check for date to
-		String projectDateTo_error = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[3]/ul/li"))
+		String projectDateTError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[3]/ul/li"))
 				.getText();
-		projectDateFrom_error.contains(Constant.DATE_ERROR);
+		projectDateTError.contains(Constant.DATE_ERROR);
 
 		// description limit error check
-		String projectDescription_error = driver.findElement(By.xpath("//*[@id='project_form']/div/ul/li")).getText();
-		projectDescription_error.contains(Constant.DESCRIPTION_PROJECT_ERROR);
+		String projectDescriptionError = driver.findElement(By.xpath("//*[@id='project_form']/div/ul/li")).getText();
+		projectDescriptionError.contains(Constant.DESCRIPTION_PROJECT_ERROR);
 
-		// image error if we r trying 2 upload any images other than jpeg and
-		// png.
-		String Projectimage_error = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[4]/ul/li"))
+		// image error if we r trying 2 upload any images other than jpeg and png.
+		String ProjectImageError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[4]/ul/li"))
 				.getText();
-		Projectimage_error.contains(Constant.IMAGE_ERROR);
+		ProjectImageError.contains(Constant.IMAGE_ERROR);
 
 		// project total cost error
-		String projectTC_error = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[8]/ul/li"))
+		String projectTCError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[8]/ul/li"))
 				.getText();
-		projectTC_error.contains(Constant.PROJECT_COST_ERROR);
+		projectTCError.contains(Constant.PROJECT_COST_ERROR);
 
 		// project total raised error
-		String projectTR_error = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[8]/ul/li"))
+		String projectTRError = driver.findElement(By.xpath("//*[@id='project_form']/div/fieldset/div[8]/ul/li"))
 				.getText();
-		projectTR_error.contains(Constant.PROJECT_COST_ERROR);
+		projectTRError.contains(Constant.PROJECT_COST_ERROR);
 
 	}
 
