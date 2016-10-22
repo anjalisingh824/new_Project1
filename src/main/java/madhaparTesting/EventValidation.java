@@ -150,7 +150,7 @@ public class EventValidation {
 		Thread.sleep(2000);
 
 		// uploading new photo that we are taking from excel
-		driver.findElement(By.id("id_eventPhotos-1-eventPhoto")).sendKeys("/home/smart/Downloads/diwali.jpg");
+		driver.findElement(By.id("id_eventPhotos-1-eventPhoto")).sendKeys(Constant.FIRST_IMAGE);
 		Thread.sleep(5000);
 
 		// again click on save and continue editing button
