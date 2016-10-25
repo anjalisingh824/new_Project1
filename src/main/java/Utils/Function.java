@@ -20,7 +20,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Function {
-
+       
+	//add,edit and deleting location
 	public static void selectLocation(WebDriver driver, int type, int row, int cell) throws Exception {
 		String openWindowHandle = driver.getWindowHandle();
 		Set<String> allWindowHandles = driver.getWindowHandles();
@@ -58,6 +59,7 @@ public class Function {
 		}
 	}
 
+	//add,edit and delete category
 	public static void selectCategory(WebDriver driver, int type, int row, int cell) throws Exception {
 		String openWindowHandle = driver.getWindowHandle();
 		Set<String> allWindowHandles = driver.getWindowHandles();
