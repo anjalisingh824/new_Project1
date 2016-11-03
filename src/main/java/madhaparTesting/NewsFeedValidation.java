@@ -128,7 +128,7 @@ public class NewsFeedValidation {
 		Thread.sleep(5000);
 
 		// save button click
-		driver.findElement(By.xpath("/*[@id='newsfeed_form']/div/div[2]/input[1]")).click();
+		driver.findElement(By.xpath("//*[@id='newsfeed_form']/div/div[2]/input[1]")).click();
 		Thread.sleep(5000);
 
 		// description limit check after clicking on the save button
